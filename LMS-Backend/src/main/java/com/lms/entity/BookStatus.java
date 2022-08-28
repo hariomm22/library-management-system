@@ -9,20 +9,12 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Address {
+public class BookStatus {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	private String street;
-	
-	private String city;
-	
-	private String pinCode;
-	
-	private String state;
-	
-	private String country;
-	
+	private String status;
+
 }

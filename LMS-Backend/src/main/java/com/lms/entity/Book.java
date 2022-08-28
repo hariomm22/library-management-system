@@ -1,5 +1,7 @@
 package com.lms.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,20 +11,20 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Address {
-	
+public class Book implements Serializable {
+	private static final long serialVersionUID = 4887904943282174032L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
-	private String street;
+	private String name;
 	
-	private String city;
+	private String  author;
 	
-	private String pinCode;
+	private String subject;
 	
-	private String state;
+	private String course;
 	
-	private String country;
+	private Integer stock;
 	
 }
